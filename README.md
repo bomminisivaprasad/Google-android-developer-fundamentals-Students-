@@ -61,10 +61,5 @@ Microphone and Speakers facility for Offline training program.
             d. Room Persistence Library.
 ### Material:
 
-              Please follow this link to access all the Google resources such as 
-              Slide decks
-              Concepts Gitbook Document
-              Starter Apps Code
-              Solution Code
-              CodeLabs.
+         https://developer.android.com/courses/fundamentals-training/overview-v2
                 
