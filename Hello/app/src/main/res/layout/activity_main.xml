@@ -14,6 +14,7 @@
         android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_weight="0.1"
+        android:onClick="hello_toast"
         android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/text_view"
@@ -21,6 +22,7 @@
         android:textSize="150sp"
         android:textStyle="bold"
         android:gravity="center"
+        android:layout_marginTop="10dp"
         android:background="@color/yellow"
         android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
@@ -31,8 +33,10 @@
         android:text="Count"
         android:background="@color/bule"
         android:textSize="20sp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_weight="0.1"
         android:layout_height="wrap_content"/>
+
 </LinearLayout>
