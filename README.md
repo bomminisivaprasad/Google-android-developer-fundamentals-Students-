@@ -65,6 +65,7 @@ Microphone and Speakers facility for Offline training program.
  https://developer.android.com/courses/fundamentals-training/overview-v2
 
 ### Recyclerview Dependency
-[Link](implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha03)
+<u>Link</u>
+ implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha03
 
                 
