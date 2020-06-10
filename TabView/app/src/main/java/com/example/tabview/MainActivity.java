@@ -1,7 +1,5 @@
 package com.example.tabview;
 
-
-
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
