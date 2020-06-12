@@ -70,4 +70,15 @@ Microphone and Speakers facility for Offline training program.
 ### Images
 https://drive.google.com/drive/folders/1NyQNbCD2D1wWzF2Yy6qX3h8NdVCwD7O7?usp=sharing
 
+### Rectrofit Dependency
+
+implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+
+### compileOptions for Rectrofit 
+ compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
                 
