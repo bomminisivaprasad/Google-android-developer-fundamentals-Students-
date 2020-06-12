@@ -12,6 +12,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -84,8 +90,20 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+            progressBar.setVisibility(View.GONE);
+            //Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
+            try {
+                JSONObject jsonObject =new JSONObject(s);
+                JSONArray hitsArray = jsonObject.getJSONArray("hits");
+                JSONObject mydata = hitsArray.getJSONObject(6);
+                String image = mydata.getString("largeImageURL");
+                String likes = mydata.getString("likes");
+                tv.setText("Likes : "+likes);
+                Picasso.get().load(image).into(iv);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
 
-            Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
         }
     }
 
