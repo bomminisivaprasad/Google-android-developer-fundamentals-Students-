@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.naviagtioncomponets.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_blueFragment2"
+            app:destination="@id/blueFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_greenFragment2"
+            app:destination="@id/greenFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_redFragment2"
+            app:destination="@id/redFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_secondActivity2"
+            app:destination="@id/secondActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/blueFragment"
+        android:name="com.example.naviagtioncomponets.BlueFragment"
+        android:label="fragment_blue"
+        tools:layout="@layout/fragment_blue" />
+    <fragment
+        android:id="@+id/greenFragment"
+        android:name="com.example.naviagtioncomponets.GreenFragment"
+        android:label="fragment_green"
+        tools:layout="@layout/fragment_green" />
+    <fragment
+        android:id="@+id/redFragment"
+        android:name="com.example.naviagtioncomponets.RedFragment"
+        android:label="fragment_red"
+        tools:layout="@layout/fragment_red" />
+    <activity
+        android:id="@+id/secondActivity"
+        android:name="com.example.naviagtioncomponets.SecondActivity"
+        android:label="activity_second"
+        tools:layout="@layout/activity_second" />
+</navigation>

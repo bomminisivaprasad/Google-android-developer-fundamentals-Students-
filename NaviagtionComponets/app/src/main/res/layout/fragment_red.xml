@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F31403"
+    tools:context=".RedFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="This Is Reg Fragment"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:fontFamily="serif"/>
+
+</FrameLayout>

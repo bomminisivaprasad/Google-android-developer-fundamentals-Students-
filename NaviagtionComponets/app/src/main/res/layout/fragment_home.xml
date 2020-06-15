@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:padding="10dp"
+       android:orientation="vertical">
+
+       <Button
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/red"
+       android:text="Red"
+       android:background="#F31404"
+       android:textColor="#FFFFFF"
+       android:textSize="20sp"
+       android:fontFamily="serif"
+       android:textStyle="bold"/>
+
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/green"
+           android:text="Green"
+           android:background="#06B80D"
+           android:textColor="#FFFFFF"
+           android:textSize="20sp"
+           android:fontFamily="serif"
+           android:textStyle="bold"
+           android:layout_marginTop="10dp"/>
+
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/blue"
+           android:text="Blue"
+           android:background="#0423D1"
+           android:textColor="#FFFFFF"
+           android:textSize="20sp"
+           android:fontFamily="serif"
+           android:textStyle="bold"
+           android:layout_marginTop="10dp"/>
+
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/activity_one"
+           android:text="Activity"
+           android:background="#EF2167"
+           android:textColor="#FFFFFF"
+           android:textSize="20sp"
+           android:fontFamily="serif"
+           android:textStyle="bold"
+           android:layout_marginTop="10dp"/>
+
+
+   </LinearLayout>
+
+</FrameLayout>
