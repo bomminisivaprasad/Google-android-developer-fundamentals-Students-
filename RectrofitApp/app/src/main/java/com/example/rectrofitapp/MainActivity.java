@@ -8,6 +8,14 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -32,7 +40,24 @@ ProgressBar progressBar;
         data.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                Toast.makeText(MainActivity.this, response.body(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, response.body(), Toast.LENGTH_SHORT).show();
+                try {
+                    JSONArray root=new JSONArray(response.body());
+                    for (int i=0;i<root.length();i++){
+                        JSONObject data=root.getJSONObject(i);
+                        String date=data.getString("Date");
+                        int active=data.getInt("Active");
+                        int conf=data.getInt("Confirmed");
+                        int deaths=data.getInt("Deaths");
+                        int recover=data.getInt("Recovered");
+                        tv.append(parseDateToddMMyyyy(date.substring(0,10))+" : "
+                                +conf+" : "+active+" : "+recover+" : "
+                                   +deaths+"\n");
+
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 progressBar.setVisibility(View.GONE);
             }
 
@@ -45,5 +70,22 @@ ProgressBar progressBar;
         });
 
 
+    }
+    public String parseDateToddMMyyyy(String time) {
+        String inputPattern = "yyyy-MM-dd";
+        String outputPattern = "dd-MM-yyyy";
+        SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern);
+        SimpleDateFormat outputFormat = new SimpleDateFormat(outputPattern);
+
+        Date date = null;
+        String str = null;
+
+        try {
+            date = inputFormat.parse(time);
+            str = outputFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return str;
     }
 }
